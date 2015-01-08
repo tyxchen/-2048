@@ -434,7 +434,8 @@ hr {
   @while $exponent <= $limit {
     $power: pow($base, $exponent);
 
-    &.tile-#{$power} .tile-inner {
+    &.tile-#{$power} .tile-inner,
+    &.tile--#{$power} .tile-inner {
       // Calculate base background color
       $gold-percent: ($exponent - 1) / ($limit - 1) * 100;
       $mixed-background: mix($tile-gold-color, $tile-color, $gold-percent);
